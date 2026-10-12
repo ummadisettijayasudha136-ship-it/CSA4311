@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Arithmetic Operations</title>
+</head>
+
+<body>
+
+<h2>Arithmetic Operations</h2>
+
+<input type="number" id="a" placeholder="Enter first number">
+<input type="number" id="b" placeholder="Enter second number">
+
+<br><br>
+
+<button onclick="add()">Add</button>
+<button onclick="sub()">Subtract</button>
+<button onclick="mul()">Multiply</button>
+<button onclick="div()">Divide</button>
+
+<p id="result"></p>
+
+<script>
+function add() {
+    result.innerHTML = Number(a.value) + Number(b.value);
+}
+
+function sub() {
+    result.innerHTML = Number(a.value) - Number(b.value);
+}
+
+function mul() {
+    result.innerHTML = Number(a.value) * Number(b.value);
+}
+
+function div() {
+    result.innerHTML = Number(a.value) / Number(b.value);
+}
+</script>
+
+</body>
+</html>
