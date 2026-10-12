@@ -1,0 +1,33 @@
+Client
+<html>
+<head>
+    <title>Client Server</title>
+</head>
+
+<body>
+
+<h1>Client Server Connection</h1>
+
+<form action="server.html" method="get">
+    <label>Enter Name:</label>
+    <input type="text" name="name">
+    <input type="submit" value="Connect">
+</form>
+
+</body>
+</html>
+Server
+<html>
+<head>
+    <title>Server</title>
+</head>
+
+<body>
+
+<h2>Server Page</h2>
+
+<p>Connection Established Successfully!</p>
+<p>Welcome to Internet Programming.</p>
+
+</body>
+</html>
