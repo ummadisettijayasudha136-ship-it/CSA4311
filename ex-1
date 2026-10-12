@@ -1,0 +1,31 @@
+,30 @@
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+
+<body>
+
+    <h1>My Profile</h1>
+
+    <h2>Divya</h2>
+
+    <p>
+        I am a Computer Science Engineering student.
+        I am interested in Internet Programming and Web Development.
+    </p>
+
+    <h3>My Skills</h3>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+    </ul>
+
+    <h3>My Goal</h3>
+    <p>To become a skilled software developer.</p>
+
+</body>
+</html>
