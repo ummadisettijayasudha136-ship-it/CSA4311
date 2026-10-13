@@ -1,0 +1,27 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#fff0f5">
+<h2>Beauty Parlour Booking</h2>
+<form onsubmit="book(event)">
+<input id="n" placeholder="Customer Name" required><br><br>
+<input id="s" placeholder="Phone Number" required><br><br>
+<select id="service">
+<option value="300">Haircut - ₹300</option>
+<option value="500">Facial - ₹500</option>
+<option value="800">Bridal Makeup - ₹800</option>
+</select><br><br>
+<input type="date" id="d" required><br><br>
+<input type="time" id="t" required><br><br>
+<button>Book Appointment</button>
+</form>
+<p id="r"></p>
+<script>
+function book(e){
+e.preventDefault();
+document.getElementById("r").innerText=
+"Appointment Booked! Date: "+d.value+
+" Time: "+t.value+" Fee: ₹"+service.value+" (Demo)";
+}
+</script>
+</body>
+</html>
