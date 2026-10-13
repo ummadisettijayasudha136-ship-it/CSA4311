@@ -1,0 +1,26 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#fff0f5">
+<h2>Online Cake Shop</h2>
+<form onsubmit="orderCake(event)">
+<input id="name" placeholder="Customer Name" required><br><br>
+<select id="cake">
+<option value="500">Chocolate Cake - ₹500</option>
+<option value="700">Black Forest - ₹700</option>
+<option value="900">Red Velvet - ₹900</option>
+</select><br><br>
+<input id="qty" type="number" min="1" value="1" required><br><br>
+<input id="address" placeholder="Delivery Address" required><br><br>
+<button>Place Order</button>
+</form>
+<p id="result"></p>
+<script>
+function orderCake(e){
+e.preventDefault();
+document.getElementById("result").innerText=
+"Order Successful! Total: ₹"+
+(Number(cake.value)*Number(qty.value))+" (Demo)";
+}
+</script>
+</body>
+</html>
