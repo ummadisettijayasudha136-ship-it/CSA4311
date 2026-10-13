@@ -1,0 +1,30 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#eaf7ff">
+<h2>Home Finder</h2>
+<input id="loc" placeholder="Enter Location">
+<input id="max" type="number" placeholder="Max Budget">
+<select id="type">
+<option>House</option>
+<option>Land</option>
+<option>Apartment</option>
+</select>
+<button onclick="searchHome()">Search</button>
+<div id="result"></div>
+<script>
+let homes=[
+["Chennai","House",2500000],
+["Bangalore","Apartment",3500000],
+["Madurai","Land",1000000]
+];
+function searchHome(){
+result.innerHTML="";
+homes.filter(h=>h[0].toLowerCase().includes(loc.value.toLowerCase())
+&&h[1]==type.value&&h[2]<=Number(max.value))
+.forEach(h=>result.innerHTML+=
+`<p>${h[1]} - ${h[0]} - ₹${h[2].toLocaleString("en-IN")}</p>`);
+if(!result.innerHTML)result.innerText="No properties found";
+}
+</script>
+</body>
+</html>
