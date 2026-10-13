@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Booking</title>
+<style>
+body{text-align:center;font-family:Arial;background:#eee}
+form{background:white;padding:20px;margin:30px auto;width:300px}
+input,select,button{padding:10px;margin:8px;width:90%}
+button{background:teal;color:white}
+</style>
+</head>
+<body>
+<h1>Online Hotel Booking</h1>
+<form onsubmit="book(event)">
+<input id="name" placeholder="Your Name" required>
+<input id="place" placeholder="Destination" required>
+<input type="date" id="date" required>
+<select id="room">
+<option value="1500">Standard - ₹1500</option>
+<option value="2500">Deluxe - ₹2500</option>
+<option value="4000">Suite - ₹4000</option>
+<option value="5000">Family - ₹5000</option>
+</select>
+<button>Book Room</button>
+<p id="result"></p>
+</form>
+<script>
+function book(e){
+e.preventDefault();
+document.getElementById("result").innerText=
+"Booking demo successful! Total: ₹"+
+document.getElementById("room").value;
+}
+</script>
+</body>
+</html>
