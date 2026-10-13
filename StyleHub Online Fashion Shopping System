@@ -1,0 +1,35 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#fff0f5">
+<h2>StyleHub Fashion Store</h2>
+<select id="cat" onchange="show()">
+<option>All</option>
+<option>Men</option>
+<option>Women</option>
+<option>Kids</option>
+</select>
+<input id="s" placeholder="Search clothes">
+<button onclick="show()">Search</button>
+<div id="items"></div>
+<p id="cart">Cart: 0 items</p>
+<script>
+let products=[
+["Men","Shirt",700],
+["Women","Dress",1200],
+["Kids","Shoes",500]
+],count=0;
+function show(){
+items.innerHTML="";
+products.filter(p=>(cat.value=="All"||p[0]==cat.value)&&
+p[1].toLowerCase().includes(s.value.toLowerCase()))
+.forEach(p=>items.innerHTML+=
+`<p>${p[0]} ${p[1]} - ₹${p[2]}
+<button onclick="add()">Add to Cart</button></p>`);
+}
+function add(){
+cart.innerText="Cart: "+(++count)+" items";
+}
+show();
+</script>
+</body>
+</html>
