@@ -1,0 +1,26 @@
+
+<html>
+<body style="text-align:center;font-family:Arial">
+<h2>Train Reservation System</h2>
+<form onsubmit="book(event)">
+<input id="n" placeholder="Passenger Name" required><br><br>
+<input id="f" placeholder="From Station" required><br><br>
+<input id="t" placeholder="To Station" required><br><br>
+<input type="date" required><br><br>
+<select id="c">
+<option value="500">Sleeper ₹500</option>
+<option value="1000">AC ₹1000</option>
+</select><br><br>
+<button>Book Ticket</button>
+</form>
+<p id="r"></p>
+<script>
+function book(e){
+e.preventDefault();
+document.getElementById("r").innerText=
+"Ticket Booked! PNR: "+Math.floor(Math.random()*900000+100000)+
+" Fare: ₹"+c.value+" (Demo)";
+}
+</script>
+</body>
+</html>
