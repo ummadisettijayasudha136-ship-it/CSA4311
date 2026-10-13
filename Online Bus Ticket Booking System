@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bus Ticket Booking</title>
+<style>
+body{text-align:center;font-family:Arial;background:#eee}
+form{background:white;padding:20px;margin:30px auto;width:300px}
+input,select,button{padding:10px;margin:8px;width:90%}
+button{background:teal;color:white}
+</style>
+</head>
+<body>
+<h1>Online Bus Ticket Booking</h1>
+<form onsubmit="book(event)">
+<input id="name" placeholder="Passenger Name" required>
+<input id="from" placeholder="From" required>
+<input id="to" placeholder="To" required>
+<input type="date" id="date" required>
+<select id="bus">
+<option value="500">AC Bus - ₹500</option>
+<option value="700">Volvo Bus - ₹700</option>
+<option value="400">Sleeper Bus - ₹400</option>
+</select>
+<input type="number" id="seats" placeholder="Number of Seats" min="1" required>
+<button>Book Ticket</button>
+<p id="result"></p>
+</form>
+<script>
+function book(e){
+e.preventDefault();
+let total=Number(document.getElementById("bus").value)*
+Number(document.getElementById("seats").value);
+document.getElementById("result").innerText=
+"Booking Successful! Total: ₹"+total+
+" (Demo Only)";
+}
+</script>
+</body>
+</html>
