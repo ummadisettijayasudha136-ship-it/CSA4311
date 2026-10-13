@@ -1,0 +1,31 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#eef2ff">
+<h2>TechSavvy Electronics Shop</h2>
+<input id="search" placeholder="Search gadgets">
+<button onclick="find()">Search</button>
+<div id="products"></div>
+<p id="cart">Cart: 0 items</p>
+<script>
+let items=[
+["Mobile Phone",15000],
+["Laptop",45000],
+["Tablet",12000],
+["Headphones",1500]
+], count=0;
+function find(){
+let s=search.value.toLowerCase();
+products.innerHTML="";
+items.filter(x=>x[0].toLowerCase().includes(s)).forEach(x=>{
+products.innerHTML+=`<p>${x[0]} - ₹${x[1]}
+<button onclick="add()">Add to Cart</button></p>`;
+});
+}
+function add(){
+count++;
+cart.innerText="Cart: "+count+" items";
+}
+find();
+</script>
+</body>
+</html>
