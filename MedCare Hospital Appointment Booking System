@@ -1,0 +1,28 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#eaf7ff">
+<h2>MedCare Hospital</h2>
+<form onsubmit="book(event)">
+<input id="n" placeholder="Patient Name" required><br><br>
+<input id="l" placeholder="Hospital Location" required><br><br>
+<select id="d">
+<option>General Physician</option>
+<option>Cardiologist</option>
+<option>Dentist</option>
+<option>Dermatologist</option>
+</select><br><br>
+<input type="date" id="date" required><br><br>
+<input type="time" id="time" required><br><br>
+<button>Book Appointment</button>
+</form>
+<p id="r"></p>
+<script>
+function book(e){
+e.preventDefault();
+document.getElementById("r").innerText=
+"Appointment Booked! Patient: "+n.value+
+" | Doctor: "+d.value+" | Date: "+date.value;
+}
+</script>
+</body>
+</html>
