@@ -1,0 +1,26 @@
+
+<html>
+<body style="text-align:center;font-family:Arial;background:#eee">
+<h2>Online Flight Reservation</h2>
+<form onsubmit="book(event)">
+<input id="n" placeholder="Passenger Name" required><br><br>
+<input id="f" placeholder="From" required><br><br>
+<input id="t" placeholder="Destination" required><br><br>
+<input type="date" required><br><br>
+<select id="c">
+<option value="3000">Economy ₹3000</option>
+<option value="6000">Business ₹6000</option>
+</select><br><br>
+<button>Book Flight</button>
+</form>
+<p id="r"></p>
+<script>
+function book(e){
+e.preventDefault();
+document.getElementById("r").innerText=
+"Flight Booked! Ticket: "+Math.floor(Math.random()*90000+10000)+
+" Fare: ₹"+c.value+" (Demo)";
+}
+</script>
+</body>
+</html>
