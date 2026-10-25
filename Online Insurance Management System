@@ -1,0 +1,28 @@
+```html
+<html>
+<body style="text-align:center;background:lightblue">
+<h1>InsureEasy</h1>
+
+<h3>Admin Login</h3>
+<input placeholder="Username"><br><br>
+<input type="password" placeholder="Password"><br><br>
+<button onclick="alert('Admin Login Successful')">Login</button>
+
+<h3>Agent Registration</h3>
+<input placeholder="Agent Name"><br><br>
+<input placeholder="Email"><br><br>
+<button onclick="alert('Registration Successful')">Register</button>
+
+<h3>Customer Policy</h3>
+<input placeholder="Customer Name"><br><br>
+<select>
+<option>Health Insurance</option>
+<option>Vehicle Insurance</option>
+<option>Home Insurance</option>
+</select><br><br>
+<button onclick="alert('Policy Added')">Add Policy</button>
+<button onclick="alert('SMS Reminder Sent')">Send SMS</button>
+
+</body>
+</html>
+```
