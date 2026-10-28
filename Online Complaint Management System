@@ -1,0 +1,30 @@
+
+class Complaint {
+    id: number;
+    user: string;
+    description: string;
+    status: string = "Pending";
+
+    constructor(id: number, user: string, desc: string) {
+        this.id = id;
+        this.user = user;
+        this.description = desc;
+    }
+
+    display(): void {
+        console.log("Complaint ID:", this.id);
+        console.log("User:", this.user);
+        console.log("Description:", this.description);
+        console.log("Status:", this.status);
+    }
+
+    updateStatus(status: string): void {
+        this.status = status;
+    }
+}
+
+let c = new Complaint(101, "Jayasudha", "Water problem");
+c.display();
+
+c.updateStatus("Resolved");
+console.log("Updated Status:", c.status);
