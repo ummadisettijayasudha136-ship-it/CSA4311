@@ -1,0 +1,32 @@
+class EasyToll {
+    balance: number = 0;
+
+    register(name: string) {
+        console.log(name + " Registered");
+    }
+
+    login() {
+        console.log("Login Successful");
+    }
+
+    addMoney(amount: number) {
+        this.balance += amount;
+        console.log("Money Added: " + amount);
+    }
+
+    payToll(amount: number) {
+        if (this.balance >= amount) {
+            this.balance -= amount;
+            console.log("Toll Paid Successfully");
+        } else {
+            console.log("Insufficient Balance");
+        }
+    }
+}
+
+let t = new EasyToll();
+t.register("Jayasudha");
+t.login();
+t.addMoney(1000);
+t.payToll(200);
+console.log("Balance: " + t.balance);
