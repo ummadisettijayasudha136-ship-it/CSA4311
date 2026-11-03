@@ -1,0 +1,38 @@
+
+<html>
+<head>
+<title>ReNewMarket</title>
+</head>
+<body bgcolor="lightyellow">
+
+<h1>ReNewMarket</h1>
+<h2>Products</h2>
+
+<p>Mobile - ₹5000</p>
+<p>Chair - ₹1200</p>
+
+<h2>Add Product</h2>
+<input id="item" placeholder="Product Name">
+<button onclick="add()">Add Product</button>
+<p id="product"></p>
+
+<h2>Order Status</h2>
+<button onclick="status('Shipped')">Shipped</button>
+<button onclick="status('Received')">Received</button>
+<p id="result"></p>
+
+<script>
+function add() {
+let name = document.getElementById("item").value;
+document.getElementById("product").innerHTML =
+"Added Product: " + name;
+}
+
+function status(value) {
+document.getElementById("result").innerHTML =
+"Order Status: " + value;
+}
+</script>
+
+</body>
+</html>
