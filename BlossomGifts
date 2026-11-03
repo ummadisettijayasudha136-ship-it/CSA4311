@@ -1,0 +1,45 @@
+
+<html>
+<head>
+<title>BlossomGifts</title>
+</head>
+<body bgcolor="pink">
+
+<h1>BlossomGifts</h1>
+<h2>Flowers and Gifts</h2>
+
+<h3>Categories</h3>
+<p>Flowers | Cakes | Gift Baskets</p>
+
+<h3>Products</h3>
+<p>Rose Bouquet - ₹599</p>
+<button onclick="buy('Rose Bouquet')">Order Now</button>
+
+<p>Gift Basket - ₹899</p>
+<button onclick="buy('Gift Basket')">Order Now</button>
+
+<h3>Delivery Details</h3>
+<input id="name" placeholder="Customer Name">
+<input type="date" id="date">
+<button onclick="confirmOrder()">Confirm Order</button>
+
+<p id="result"></p>
+
+<script>
+function buy(item) {
+document.getElementById("result").innerHTML =
+"Selected Product: " + item;
+}
+
+function confirmOrder() {
+let n = document.getElementById("name").value;
+let d = document.getElementById("date").value;
+
+document.getElementById("result").innerHTML =
+"Order Confirmed for " + n +
+"<br>Delivery Date: " + d;
+}
+</script>
+
+</body>
+</html>
